@@ -8,8 +8,10 @@ class Student < InteractiveRecord
   end
   
   def self.find_by(column)
+    column.each do |x,y|
       sql = "SELECT * FROM #{self.table_name} WHERE #{column[0]} = '#{column[0][0]}'"
        DB[:conn].execute(sql)
+     end
     
   end
   
