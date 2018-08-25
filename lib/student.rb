@@ -7,8 +7,10 @@ class Student < InteractiveRecord
     attr_accessor col_name.to_sym
   end
   
-  def find_by()
-    
+  def find_by(column)
+    sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
+    DB[:conn].execute(sql)
+  end
   
 
 end
