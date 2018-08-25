@@ -11,7 +11,7 @@ class Student < InteractiveRecord
     row = {}
     column.each do |x,y|
       sql = "SELECT * FROM #{self.table_name} WHERE #{x.to_s} = '#{y}'"
-       DB[:conn].execute(sql)
+     row =  DB[:conn].execute(sql)
      end
     
   end
