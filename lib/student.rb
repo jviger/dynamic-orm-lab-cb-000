@@ -9,7 +9,7 @@ class Student < InteractiveRecord
   
   def find_by(column)
     column.each do |x,y|
-      sql = "SELECT * FROM #{self.table_name} WHERE #{column[0]} = '#{column}'"
+      sql = "SELECT * FROM #{self.table_name} WHERE #{x} = '#{y}'"
       DB[:conn].execute(sql)
     end
   end
