@@ -10,7 +10,6 @@ class Student < InteractiveRecord
   def self.find_by(column)
       sql = "SELECT * FROM #{self.table_name} WHERE #{column.key} = '#{column.value}'"
        DB[:conn].execute(sql)
-    end
     
   end
   
