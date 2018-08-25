@@ -13,7 +13,7 @@ class Student < InteractiveRecord
       sql = "SELECT * FROM #{self.table_name} WHERE #{x.to_s} = '#{y}'"
      row =  DB[:conn].execute(sql)
      end
-    
+    row
   end
   
 
