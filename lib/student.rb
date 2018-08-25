@@ -8,7 +8,7 @@ class Student < InteractiveRecord
   end
   
   def self.find_by(column)
-      sql = "SELECT * FROM #{self.table_name} WHERE #{column.key} = '#{column.value}'"
+      sql = "SELECT * FROM #{self.table_name} WHERE #{column[0]} = '#{column[0][0]}'"
        DB[:conn].execute(sql)
     
   end
