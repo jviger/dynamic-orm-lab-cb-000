@@ -10,7 +10,7 @@ class Student < InteractiveRecord
   def self.find_by(column)
     row = {}
     column.each do |x,y|
-      sql = "SELECT * FROM #{self.table_name} WHERE #{x.to_s} = '#{y}'"
+      sql = "SELECT * FROM #{self.table_name} WHERE #{x} = '#{y}'"
      row =  DB[:conn].execute(sql)
      end
     row
