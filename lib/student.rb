@@ -7,6 +7,8 @@ class Student < InteractiveRecord
     attr_accessor col_name.to_sym
   end
   
+  def find_by()
+    
   
 
 end
